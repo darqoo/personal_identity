@@ -1,0 +1,26 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/bg_full.png");
+    background-color: #0f1925;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: "MyriadPro-Regular";
+    font-size: 10px;
+    color: #c6c3cc;
+    position: relative;
+}
+
+@media (max-width: 600px) {}
+
+@media (min-width: 600px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
