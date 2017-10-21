@@ -4,4 +4,4 @@ This is my personal identity
 
 ### First step
 
-[darqoo](http://www.darqoo.pl)
+[darqoo](https://darqoo.github.io/personal_identity/)
