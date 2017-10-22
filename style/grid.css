@@ -27,9 +27,12 @@
     box-sizing: border-box;
 }
 
-.container {
-    
+html, body {
+    width: 100%;
+    height: 100%;
 }
+
+.container {}
 
 .bold {
     font-family: 'MyriadPro-Bold';
