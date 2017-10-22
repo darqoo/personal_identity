@@ -129,7 +129,7 @@ function wait(funk, time) {
 wait(TyperSetup1, 0);
 wait(TyperSetup2, 500);
 wait(TyperSetup3, 1500);
-wait(TyperSetup4, 5100);
+wait(TyperSetup4, 5400);
 wait(function() {
     $('.cursor1').css('display', 'none')
 }, 490);
@@ -148,4 +148,4 @@ wait(function() {
 wait(function() {
     $('.cursor4').css('display', 'inline');
     cursorBlink(4);
-}, 5090);
+}, 5390);
