@@ -63,7 +63,7 @@ Typed.prototype.doTyping = function() {
 
 var Cursor = function(element) {
     this.element = element;
-    this.cursorDisplay = element.dataset.cursordisplay || "_";
+    this.cursorDisplay = "_";
     element.innerHTML = this.cursorDisplay;
     this.on = true;
     element.style.transition = "all 0.1s";
@@ -74,10 +74,10 @@ var Cursor = function(element) {
 }
 Cursor.prototype.updateBlinkState = function() {
     if (this.on) {
-        this.element.style.opacity = "0";
+        this.element.style.display = "none";
         this.on = false;
     } else {
-        this.element.style.opacity = "1";
+        this.element.style.display = "inline";
         this.on = true;
     }
 }
