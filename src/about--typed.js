@@ -28,10 +28,10 @@ Typed.prototype.doTyping = function() {
         this.cursor.element.style.opacity = "1";
         this.cursor.on = true;
         clearInterval(this.cursor.interval);
-        var itself = this.cursor;
-        this.cursor.interval = setInterval(function() {
-            itself.updateBlinkState();
-        }, 400);
+        // var itself = this.cursor;
+        // this.cursor.interval = setInterval(function() {
+        //     itself.updateBlinkState();
+        // }, 400);
     }
     if (p.building) {
         e.innerHTML += currentChar;
