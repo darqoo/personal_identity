@@ -8,6 +8,18 @@ body {
     font-size: 20px;
     color: #c6c3cc;
     position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#smoothly-show {
+    opacity: 0;
 }
 
 .about--typed {
@@ -27,8 +39,21 @@ body {
 }
 
 .about--typed h1 {
+    transform: scale(1.00);
+    transition: opacity 289ms cubic-bezier(0.694, 0, 0.335, 1), transform 700ms cubic-bezier(0.694, 0, 0.335, 1);
     margin-top: 0;
     margin-bottom: 6px;
+}
+
+.about--typed h1:hover {
+    transform: scale(1.05);
+    transition: opacity 289ms cubic-bezier(0.694, 0, 0.335, 1), transform 700ms cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+.flyingSquare {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
 }
 
 @media (max-width: 600px) {
