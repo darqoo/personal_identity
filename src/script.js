@@ -44,28 +44,47 @@ function smoothlyShow() {
             innerContainer.style.opacity = opacity / 100;
             opacity += 1;
         };
-    }, 15);
+    }, 10);
 };
 
-function scrollPage() {
-    window.addEventListener('wheel', function scroll(event) {
-        if (pageNumber > 1) {
-            if (event.deltaY === -53) {
-                if (document.getElementById('smoothly-show').style.opacity === '1') {
-                    pageNumber--;
-                    renderPage('page_' + pageNumber);
-                }
-            }
-        }
-        if (pageNumber < 4) {
-            if (event.deltaY === 53) {
-                if (document.getElementById('smoothly-show').style.opacity === '1') {
-                    pageNumber++;
-                    renderPage('page_' + pageNumber);
-                }
-            }
-        }
+function loadNextPage() {
+    var opacity = document.getElementById('smoothly-show').style.opacity;
+    if (opacity === '1') {
+        pageNumber--;
+        renderPage('page_' + pageNumber);
+    };
+};
+
+function loadPreviusPage() {
+    var opacity = document.getElementById('smoothly-show').style.opacity;
+    if (opacity === '1') {
+        pageNumber++;
+        renderPage('page_' + pageNumber);
+    };
+};
+
+function mouseScroll(event) {
+    if (pageNumber > 1 && event.deltaY === -53) loadNextPage();
+    if (pageNumber < 4 && event.deltaY === 53) loadPreviusPage();
+}
+
+function fingerScroll() {
+    var Y1;
+    window.addEventListener('touchstart', function(event) {
+        Y1 = event.changedTouches[0].clientY;
     });
+
+    window.addEventListener('touchend', function(event) {
+        var Y2 = event.changedTouches[0].clientY;
+        var direction = Y1 - Y2;
+        if (pageNumber > 1 && direction < 50) loadNextPage();
+        if (pageNumber < 4 && direction > -50) loadPreviusPage();
+    });
+}
+
+function scrollPage() {
+    window.addEventListener('wheel', mouseScroll);
+    fingerScroll();
 };
 
 scrollPage();
