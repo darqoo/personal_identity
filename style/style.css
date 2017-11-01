@@ -18,17 +18,26 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-#myPhoto {
+#my_photo_read {
+    display: none;
+}
+
+#my_photo_write {
     position: absolute;
-    top: 20%;
-    left: 7%;
+    top: 25%;
+    left: -2%;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .typed_line {
     font-family: consola;
-    font-size: 3px;
-    color: rgb(115, 115, 115);
-    margin: -1px;
+    font-size: 0.35vw;
+    color: rgb(130, 130, 130);
+    margin: 0px;
+    letter-spacing: 0.3px;
 }
 
 #smoothly-show {
