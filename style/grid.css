@@ -1,4 +1,9 @@
 @font-face {
+    font-family: "consola";
+    src: url("../fonts/consola.ttf");
+}
+
+@font-face {
     font-family: "MyriadPro-Regular";
     src: url("../fonts/MyriadPro-Regular.otf");
 }

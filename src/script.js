@@ -4,7 +4,23 @@ var scroll;
 
 window.addEventListener('load', function() {
     smoothlyShow();
+    typedImage();
 });
+
+function typedImage() {
+    var text = document.getElementById('typed_test_read');
+    var letters = document.getElementById('typed_test_read').innerText;
+    var row = [];
+
+    for (var i = 0; i < text.children.length;i++) {
+        row.push(i);
+        row[i] = [];
+        for (var j = 0; j < text.children[i].textContent.length; j++) {
+            row[i].push(text.children[i].textContent[j]);
+        }
+    }
+    console.log(row);
+}
 
 function renderPage(page) {
     var innerContainer = document.getElementById('smoothly-show');
