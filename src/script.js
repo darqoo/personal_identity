@@ -1,25 +1,39 @@
 var pageNumber = 1;
 var opacity = 0;
 var scroll;
+var row = [];
 
 window.addEventListener('load', function() {
     smoothlyShow();
     typedImage();
 });
 
-function typedImage() {
+function typedImageRead() {
     var text = document.getElementById('typed_test_read');
     var letters = document.getElementById('typed_test_read').innerText;
-    var row = [];
 
-    for (var i = 0; i < text.children.length;i++) {
+    for (var i = 0; i < text.children.length; i++) {
         row.push(i);
         row[i] = [];
         for (var j = 0; j < text.children[i].textContent.length; j++) {
             row[i].push(text.children[i].textContent[j]);
         }
     }
-    console.log(row);
+}
+
+function typedImegeWrite() {
+    var inner = document.getElementById('typed_test_write');
+    for (var i = 0; i < row.length; i++) {
+        inner.innerHTML += "<p class='typed_line' id='line_" + i + "'></p>";
+        for (var j = 0; j < row[i].length; j++) {
+            inner.children[i].textContent += row[i][j];
+        }
+    }
+}
+
+function typedImage() {
+    typedImageRead();
+    typedImegeWrite();
 }
 
 function renderPage(page) {
