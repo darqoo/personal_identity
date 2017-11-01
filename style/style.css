@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/bg_full.png");
-    /*background-color: #0f1925;*/
+    background-color: #0f1925;
     background-position: 0px 0px;
     background-repeat: no-repeat;
     margin: 0;
@@ -18,6 +18,10 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+#skills, #projects, #contact {
+    display: none;
+}
+
 #my_photo_read {
     display: none;
 }
@@ -25,7 +29,7 @@ h1 {
 #my_photo_write {
     position: absolute;
     top: 25%;
-    left: -2%;
+    left: 10%;
 }
 
 .hidden {
@@ -34,7 +38,7 @@ h1 {
 
 .typed_line {
     font-family: consola;
-    font-size: 0.35vw;
+    font-size: 3px;
     color: rgb(130, 130, 130);
     margin: 0px;
     letter-spacing: 0.3px;
