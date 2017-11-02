@@ -256,7 +256,7 @@ function fingerScroll() {
     window.addEventListener('touchstart', function(event) {
         Y1 = event.changedTouches[0].clientY;
     }, {
-        passive: true
+        passive: false
     });
 
     window.addEventListener('touchend', function(event) {
@@ -265,7 +265,7 @@ function fingerScroll() {
         if (pageNumber < 4 && direction > 50) loadPreviusPage();
         if (pageNumber > 1 && direction < -50) loadNextPage();
     }, {
-        passive: true
+        passive: false
     });
 }
 

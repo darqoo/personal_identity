@@ -119,6 +119,10 @@ body {
     z-index: 99;
 }
 
+#burger:hover {
+    cursor: pointer;
+}
+
 #burger>div {
     background-color: #969696;
     width: 36px;
@@ -151,6 +155,10 @@ body {
     width: 420px;
     height: 20px;
     font-size: 18px;
+}
+
+.menu:hover {
+    cursor: pointer;
 }
 
 .menu li {
