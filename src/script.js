@@ -179,16 +179,14 @@ function mouseScroll(event) {
 function fingerScroll() {
     var Y1;
     window.addEventListener('touchstart', function(event) {
-        event.preventDefault();
         Y1 = event.changedTouches[0].clientY;
     });
 
     window.addEventListener('touchend', function(event) {
-        event.preventDefault();
         var Y2 = event.changedTouches[0].clientY;
         var direction = Y1 - Y2;
-        if (pageNumber > 1 && direction < 80) loadNextPage();
-        if (pageNumber < 4 && direction > -80) loadPreviusPage();
+        if (pageNumber < 4 && direction > 50 ) loadPreviusPage();
+        if (pageNumber > 1 && direction < -50 ) loadNextPage();
     });
 }
 
