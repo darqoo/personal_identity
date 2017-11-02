@@ -11,8 +11,21 @@ window.addEventListener('load', function() {
             homePage();
             homePageAnimation = false;
         }, 600);
+    navigate();
 
 });
+
+function navigate() {
+    $('.menu ul').parent().click(function() {
+        $(this).children().children().toggle();
+    })
+    $('#burger').click(function() {
+        $('#navigation').toggle();
+        $('.menu ul').children().css({
+            display: 'none'
+        });
+    })
+}
 
 function renderPage(page) {
     var innerContainer = document.getElementById('smoothly-show');

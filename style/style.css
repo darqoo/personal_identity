@@ -103,6 +103,70 @@ body {
     }
 }
 
+.header {
+    position: relative;
+}
+
+#burger {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background-color: rgba(15, 25, 37, 0.39);
+    width: 50px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px 1px rgb(15, 25, 37);
+}
+
+#burger>div {
+    background-color: #969696;
+    width: 36px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#burger_line_1 {
+    top: 25%;
+}
+
+#burger_line_2 {
+    top: 50%;
+}
+
+#burger_line_3 {
+    top: 75%;
+}
+
+#navigation {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 70px;
+}
+
+.menu {
+    width: 420px;
+    height: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.menu ul {
+    position: absolute;
+    margin-left: -38px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.menu ul li {
+    display: none;
+}
+
 h1 {
     margin-bottom: 0;
 }
