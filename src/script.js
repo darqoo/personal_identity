@@ -16,15 +16,43 @@ window.addEventListener('load', function() {
 });
 
 function navigate() {
-    $('.menu ul').parent().click(function() {
-        $(this).children().children().toggle();
-    })
+    $('#menu_projects').mouseover(function() {
+        $('.down').show();
+    });
     $('#burger').click(function() {
         $('#navigation').toggle();
-        $('.menu ul').children().css({
+        $('.down').css({
             display: 'none'
         });
     })
+    $('#menu_home').click(function() {
+        homePage();
+        $('#navigation').hide();
+    });
+    $('#menu_skills').click(function() {
+        skillsPage();
+        $('#navigation').hide();
+    });
+    $('#menu_projects').click(function() {
+        projectsPage();
+        $('#navigation').hide();
+    });
+    $('#menu_business').click(function() {
+        businessPage();
+        $('#navigation').hide();
+    });
+    $('#menu_hobby').click(function() {
+        hobbyPage();
+        $('#navigation').hide();
+    });
+    $('#menu_labs').click(function() {
+        labsPage();
+        $('#navigation').hide();
+    });
+    $('#menu_contact').click(function() {
+        contactPage();
+        $('#navigation').hide();
+    });
 }
 
 function renderPage(page) {
@@ -49,7 +77,7 @@ function renderPage(page) {
 
 function homePage() {
     var row = [];
-
+    opacity = 0;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'block';
     document.getElementById('skills').style.display = 'none';
@@ -112,33 +140,80 @@ function homePage() {
 }
 
 function skillsPage() {
-
-    var inner = document.getElementById('my_text_write');
     stop = true;
-    inner.innerHTML = "";
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
     document.getElementById('skills').style.display = 'block';
     document.getElementById('projects').style.display = 'none';
     document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'none';
     smoothlyShow();
 }
 
 function projectsPage() {
+    stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
     document.getElementById('skills').style.display = 'none';
     document.getElementById('projects').style.display = 'block';
     document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'none';
+    smoothlyShow();
+}
+
+function businessPage() {
+    stop = true;
+    document.getElementById('smoothly-show').style.opacity = 0;
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('projects').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'block';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'none';
+    smoothlyShow();
+}
+
+function hobbyPage() {
+    stop = true;
+    document.getElementById('smoothly-show').style.opacity = 0;
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('projects').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'block';
+    document.getElementById('labs').style.display = 'none';
+    smoothlyShow();
+}
+
+function labsPage() {
+    stop = true;
+    document.getElementById('smoothly-show').style.opacity = 0;
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('projects').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'block';
     smoothlyShow();
 }
 
 function contactPage() {
+    stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
     document.getElementById('skills').style.display = 'none';
     document.getElementById('projects').style.display = 'none';
     document.getElementById('contact').style.display = 'block';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'none';
     smoothlyShow();
 }
 
@@ -180,14 +255,18 @@ function fingerScroll() {
     var Y1;
     window.addEventListener('touchstart', function(event) {
         Y1 = event.changedTouches[0].clientY;
-    }, {passive: true});
+    }, {
+        passive: true
+    });
 
     window.addEventListener('touchend', function(event) {
         var Y2 = event.changedTouches[0].clientY;
         var direction = Y1 - Y2;
-        if (pageNumber < 4 && direction > 50 ) loadPreviusPage();
-        if (pageNumber > 1 && direction < -50 ) loadNextPage();
-    }, {passive: true});
+        if (pageNumber < 4 && direction > 50) loadPreviusPage();
+        if (pageNumber > 1 && direction < -50) loadNextPage();
+    }, {
+        passive: true
+    });
 }
 
 function scrollPage() {

@@ -158,22 +158,33 @@ body {
     margin-right: 12px;
 }
 
-.menu ul {
+.menu .down {
     position: absolute;
-    margin-left: -38px;
-    margin-top: 10px;
+    display: none;
+    margin-left: 120px;
+    margin-top: 0px;
     list-style: none;
 }
 
-.menu ul li {
-    display: none;
+#menu_business {
+    margin-top: : 0px;
 }
+
+#menu_hobby {
+    margin-top: 24px;
+}
+
+#menu_labs {
+    margin-top: 45px;
+}
+
+.menu .down li {}
 
 h1 {
     margin-bottom: 0;
 }
 
-#skills, #projects, #contact {
+#skills, #projects, #business, #hobby, #labs, #contact {
     display: none;
 }
 
