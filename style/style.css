@@ -109,8 +109,8 @@ body {
 
 #burger {
     position: fixed;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
     background-color: rgba(15, 25, 37, 0.39);
     width: 50px;
     height: 40px;
@@ -143,18 +143,19 @@ body {
 #navigation {
     display: none;
     position: fixed;
-    top: 25px;
-    right: 13px;
+    top: 15px;
+    right: -49px;
 }
 
 .menu {
     width: 420px;
     height: 20px;
+    font-size: 18px;
 }
 
 .menu li {
     display: inline-block;
-    margin-right: 21px;
+    margin-right: 12px;
 }
 
 .menu ul {
