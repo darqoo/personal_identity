@@ -104,137 +104,49 @@ body {
 }
 
 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 0;
 }
 
 #skills, #projects, #contact {
     display: none;
 }
 
-#my_photo_read {
+#my_text_read {
     display: none;
 }
 
-#my_photo_write {
+#my_text_write, #my_text_read {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    font-size: 17px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 74%;
+    max-width: 640px;
+    height: 180px;
 }
 
-.hidden {
-    visibility: hidden;
-}
-
-.typed_line {
-    font-family: consola;
-    font-size: 3px;
-    color: rgb(130, 130, 130);
-    margin: 0px;
-    letter-spacing: 0.3px;
-}
-
-#smoothly-show {
-    opacity: 0;
-}
-
-.about--typed {
+.center_page {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.about--typed p {
-    margin-top: 0;
-    margin-bottom: 0;
+.hidden {
+    visibility: hidden;
 }
 
-.about--typed p:last-child {
-    margin-top: 10px;
+#smoothly-show {
+    opacity: 0;
 }
 
-.about--typed h1 {
-    transform: scale(1.00);
-    transition: opacity 289ms cubic-bezier(0.694, 0, 0.335, 1), transform 700ms cubic-bezier(0.694, 0, 0.335, 1);
-    margin-top: 0;
-    margin-bottom: 6px;
-}
+@media (max-width: 600px) {}
 
-.about--typed h1:hover {
-    transform: scale(1.05);
-    transition: opacity 289ms cubic-bezier(0.694, 0, 0.335, 1), transform 700ms cubic-bezier(0.694, 0, 0.335, 1);
-}
+@media (min-width: 600px) {}
 
-.flyingSquare {
-    position: absolute;
-    top: -1000px;
-    left: -1000px;
-}
+@media (min-width: 768px) {}
 
-@media (max-width: 600px) {
-    .about--typed {
-        width: 300px;
-        height: 200px;
-    }
-    .about--typed p {
-        font-size: 80%;
-    }
-    .about--typed h1 {
-        font-size: 150%;
-    }
-}
+@media (min-width: 992px) {}
 
-@media (min-width: 600px) {
-    .about--typed {
-        width: 520px;
-        height: 160px;
-    }
-    .about--typed p {
-        font-size: 80%;
-    }
-    .about--typed h1 {
-        font-size: 175%;
-    }
-}
-
-@media (min-width: 768px) {
-    .about--typed {
-        width: 710px;
-        height: 150px;
-    }
-    .about--typed p {
-        font-size: 85%;
-    }
-    .about--typed h1 {
-        font-size: 170%;
-    }
-}
-
-@media (min-width: 992px) {
-    .about--typed {
-        width: 760px;
-        height: 150px;
-    }
-    .about--typed p {
-        font-size: 95%;
-    }
-    .about--typed h1 {
-        font-size: 180%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .about--typed {
-        width: 760px;
-        height: 160px;
-    }
-    .about--typed p {
-        font-size: 100%;
-    }
-    .about--typed h1 {
-        font-size: 190%;
-    }
-}
+@media (min-width: 1200px) {}

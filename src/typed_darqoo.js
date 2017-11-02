@@ -2,9 +2,8 @@ var row = [];
 var stop = false;
 
 
-function typedImageRead() {
+function typedTextRead() {
     var text = document.getElementById('my_photo_read');
-    var letters = document.getElementById('my_photo_read').innerText;
 
     for (var x = 0; x < text.children.length; x++) {
         row.push(x);
@@ -23,30 +22,18 @@ function intervalWrite() {
 
     var inner = document.getElementById('my_photo_write');
     var i = 0;
-    var j = 1;
+    var j = 0;
     var intervalWrite = setInterval(function() {
         if (i == row.length || stop) {
             clearInterval(intervalWrite);
         } else {
-            if (j - 1 >= row[i].length) {
-                j = 1;
+            if (j >= row[i].length) {
+                j = 0;
                 i++;
             } else {
                 if (j <= row[i].length) {
-                    inner.children[i].innerHTML += row[i][j - 1] + row[i][j];
-                    j += 2;
-                }
-                if (j <= row[i].length) {
-                    inner.children[i].innerHTML += row[i][j - 1] + row[i][j];
-                    j += 2;
-                }
-                if (j <= row[i].length) {
-                    inner.children[i].innerHTML += row[i][j - 1] + row[i][j];
-                    j += 2;
-                }
-                if (j <= row[i].length) {
-                    inner.children[i].innerHTML += row[i][j - 1] + row[i][j];
-                    j += 2;
+                    inner.children[i].innerHTML += row[i][j];
+                    j++;
                 }
             };
         };
@@ -66,7 +53,7 @@ function intervalWriteWithoutTyping() {
     };
 }
 
-function typedImegeWrite() {
+function typedTextWrite() {
     var inner = document.getElementById('my_photo_write');
     for (var line = 0; line < row.length; line++) {
         inner.innerHTML += "<p class='typed_line' id='line_" + line + "'></p>";
