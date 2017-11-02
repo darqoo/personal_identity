@@ -70,6 +70,15 @@ function renderPage(page) {
         case 'page_4':
             contactPage();
             break;
+        case 'page_31':
+            businessPage();
+            break;
+        case 'page_32':
+            hobbyPage();
+            break;
+        case 'page_33':
+            labsPage();
+            break;
         default:
 
     }
@@ -77,12 +86,16 @@ function renderPage(page) {
 
 function homePage() {
     var row = [];
+    pageNumber = 1;
     opacity = 0;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'block';
     document.getElementById('skills').style.display = 'none';
     document.getElementById('projects').style.display = 'none';
     document.getElementById('contact').style.display = 'none';
+    document.getElementById('business').style.display = 'none';
+    document.getElementById('hobby').style.display = 'none';
+    document.getElementById('labs').style.display = 'none';
     smoothlyShow();
     if (homePageAnimation) {
         typedTextRead();
@@ -140,6 +153,7 @@ function homePage() {
 }
 
 function skillsPage() {
+    pageNumber = 2;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -153,6 +167,7 @@ function skillsPage() {
 }
 
 function projectsPage() {
+    pageNumber = 3;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -166,6 +181,7 @@ function projectsPage() {
 }
 
 function businessPage() {
+    pageNumber = 31;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -179,6 +195,7 @@ function businessPage() {
 }
 
 function hobbyPage() {
+    pageNumber = 32;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -192,6 +209,7 @@ function hobbyPage() {
 }
 
 function labsPage() {
+    pageNumber = 33;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -205,6 +223,7 @@ function labsPage() {
 }
 
 function contactPage() {
+    pageNumber = 4;
     stop = true;
     document.getElementById('smoothly-show').style.opacity = 0;
     document.getElementById('home').style.display = 'none';
@@ -247,8 +266,17 @@ function loadPreviusPage() {
 };
 
 function mouseScroll(event) {
-    if (pageNumber > 1 && event.deltaY === -53) loadNextPage();
-    if (pageNumber < 4 && event.deltaY === 53) loadPreviusPage();
+    if (pageNumber >= 31 && pageNumber <= 33 && event.deltaY === -53) {
+        if (pageNumber === 31 && event.deltaY === -53) {
+            pageNumber = 4;
+            loadNextPage();
+        } else {
+            loadNextPage();
+        }
+    }
+    if (pageNumber < 33 && event.deltaY === 53) loadPreviusPage();
+    if (pageNumber > 1 && pageNumber <= 4 && event.deltaY === -53) loadNextPage();
+    if (pageNumber < 4 && pageNumber >= 1 && event.deltaY === 53) loadPreviusPage();
 }
 
 function fingerScroll() {
