@@ -3,6 +3,13 @@ var opacity = 0;
 var scroll;
 
 window.addEventListener('load', function() {
+    $('#loader_bg').animate({
+        opacity: '0'
+    }, 'slow', function() {
+        $(this).css({
+            display: "none"
+        })
+    });
     smoothlyShow();
 });
 
