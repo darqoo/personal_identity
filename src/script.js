@@ -180,14 +180,14 @@ function fingerScroll() {
     var Y1;
     window.addEventListener('touchstart', function(event) {
         Y1 = event.changedTouches[0].clientY;
-    }, true);
+    }, false);
 
     window.addEventListener('touchend', function(event) {
         var Y2 = event.changedTouches[0].clientY;
         var direction = Y1 - Y2;
         if (pageNumber < 4 && direction > 50 ) loadPreviusPage();
         if (pageNumber > 1 && direction < -50 ) loadNextPage();
-    }, true);
+    }, false);
 }
 
 function scrollPage() {
