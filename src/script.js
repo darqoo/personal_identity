@@ -266,6 +266,8 @@ function loadPreviusPage() {
 };
 
 function mouseScroll(event) {
+    console.log(pageNumber);
+    console.log(event.deltaY);
     if (pageNumber >= 31 && pageNumber <= 33 && event.deltaY === -53) {
         if (pageNumber === 31 && event.deltaY === -53) {
             pageNumber = 4;
@@ -274,9 +276,10 @@ function mouseScroll(event) {
             loadNextPage();
         }
     }
-    if (pageNumber < 33 && event.deltaY === 53) loadPreviusPage();
+    if (pageNumber < 33 && pageNumber >= 31 && event.deltaY === 53) loadPreviusPage();
     if (pageNumber > 1 && pageNumber <= 4 && event.deltaY === -53) loadNextPage();
     if (pageNumber < 4 && pageNumber >= 1 && event.deltaY === 53) loadPreviusPage();
+    console.log(pageNumber);
 }
 
 function fingerScroll() {
@@ -290,8 +293,20 @@ function fingerScroll() {
     window.addEventListener('touchend', function(event) {
         var Y2 = event.changedTouches[0].clientY;
         var direction = Y1 - Y2;
+        console.log(pageNumber);
+        if (pageNumber >= 31 && pageNumber <= 33 && direction < -50) {
+            if (pageNumber === 31 && direction < -50) {
+                pageNumber = 4;
+                loadNextPage();
+            } else {
+                loadNextPage();
+            }
+        }
+    if (pageNumber < 33 && pageNumber >= 31 && direction > 50) loadPreviusPage();
         if (pageNumber < 4 && direction > 50) loadPreviusPage();
         if (pageNumber > 1 && direction < -50) loadNextPage();
+        console.log(direction);
+        console.log(pageNumber);
     }, {
         passive: false
     });
