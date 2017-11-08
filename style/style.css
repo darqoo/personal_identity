@@ -1,14 +1,44 @@
 body {
-    background-image: url("../images/bg_full.png");
-    background-color: #0f1925;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
     margin: 0;
     font-family: "MyriadPro-Regular";
     font-size: 20px;
-    color: #c6c3cc;
+    color: #b9b9b9;
     position: relative;
     overflow: hidden;
+}
+
+#bg2, #bg3, #bg4, #bg5 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#bg1 {
+    width: 100%;
+    height: 100%;
+    background-color: #fafbf6;
+}
+
+#bg2 {
+    background-image: url("./../images/mountain_image/m2.png");
+}
+
+#bg3 {
+    background-image: url("./../images/mountain_image/m3.png");
+}
+
+#bg4 {
+    background-image: url("./../images/mountain_image/m4.png");
+}
+
+#bg5 {
+    background-image: url("./../images/mountain_image/m5.png");
+}
+
+#blur {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.72);
 }
 
 #loader_bg {
@@ -17,8 +47,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(20, 32, 46);
     z-index: 9999;
+    color: rgb(255, 255, 255);
 }
 
 .loader_box {
@@ -54,9 +85,9 @@ body {
 #preloader {
     width: 20px;
     height: 24px;
-    background-color: rgb(198, 195, 204);
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    box-shadow: 23px 0px 0px 0px rgb(198, 195, 204);
+    box-shadow: 23px 0px 0px 0px rgb(255, 255, 255);
     position: relative;
     margin: 36px 26px;
 }
@@ -78,28 +109,28 @@ body {
 
 @-webkit-keyframes preloader_eyes {
     0% {
-        left: 9px;
+        left: 7px;
     }
     100% {
-        left: 1px;
+        left: 2px;
     }
 }
 
 @-moz-keyframes preloader_eyes {
     0% {
-        left: 9px;
+        left: 7px;
     }
     100% {
-        left: 1px;
+        left: 2px;
     }
 }
 
 @keyframes preloader_eyes {
     0% {
-        left: 9px;
+        left: 7px;
     }
     100% {
-        left: 1px;
+        left: 2px;
     }
 }
 
@@ -147,8 +178,8 @@ body {
 #navigation {
     display: none;
     position: fixed;
-    top: 15px;
-    right: -49px;
+    width: 300px;
+    right: 45px;
 }
 
 .menu {
@@ -163,30 +194,41 @@ body {
 
 .menu li {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 5px;
 }
 
 .menu .down {
     position: absolute;
     display: none;
-    margin-left: 120px;
-    margin-top: 0px;
+    margin-left: 108px;
     list-style: none;
 }
 
-#menu_business {
+.menu_business {
     margin-top: : 0px;
 }
 
-#menu_hobby {
+.menu_hobby {
     margin-top: 24px;
 }
 
-#menu_labs {
+.menu_labs {
     margin-top: 45px;
 }
 
-.menu .down li {}
+.menu_in_projects li:hover {
+    cursor: pointer;
+}
+
+.menu_in_projects {
+    position: absolute;
+    top: 55px;
+    left: -10px;
+}
+
+.menu_in_projects li {
+    margin-top: 1px;
+}
 
 h1 {
     margin-bottom: 0;
@@ -216,6 +258,12 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.page {
+    position: absolute;
+    top: 20%;
+    left: 2%;
 }
 
 .hidden {
