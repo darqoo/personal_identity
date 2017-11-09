@@ -136,6 +136,21 @@ body {
 
 .header {
     position: relative;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    min-width: 200px;
+    width: 13%;
 }
 
 #burger {
