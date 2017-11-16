@@ -1,8 +1,8 @@
 var pageNumber = 1;
 var opacity = 0;
+var stop = false;
 var scroll;
 var homePageAnimation = true;
-var stop = false;
 
 function load() {
 
