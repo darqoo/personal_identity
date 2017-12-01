@@ -289,7 +289,6 @@ section {
     .titleOfPage {
         margin-bottom: 3vh;
     }
-
     #contact .titleOfPage {
         margin-bottom: 17vh;
     }
@@ -303,10 +302,10 @@ section {
         margin: 0.8vh 2.5%;
     }
     .skill:not(:nth-child(2n)) {
-        float: left;
+        float: right;
     }
     .skill:nth-child(2n) {
-        float: right;
+        float: left;
     }
     .skill p {
         position: absolute;
@@ -315,12 +314,10 @@ section {
         transform: translate(-50%, -50%);
         margin: 0;
     }
-
     .contactElement {
         position: relative;
         background-color: rgba(255, 255, 255, 0.15);
         height: 9vh;
-        text-align: center;
         border-radius: 6px;
         margin: 2.8vh 13.5%;
     }
@@ -368,6 +365,66 @@ section {
     #home p {
         font-size: 15px;
     }
+    #contact .titleOfPage {
+        margin-bottom: 17vh;
+    }
+    #skills .titleOfPage {
+        margin-bottom: 30px;
+    }
+    .skill {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.15);
+        width: 45%;
+        height: 9vh;
+        text-align: center;
+        border-radius: 6px;
+        margin: 0.8vh 2.5%;
+    }
+    .skill:not(:nth-child(2n)) {
+        float: right;
+    }
+    .skill:nth-child(2n) {
+        float: left;
+    }
+    .skill p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+    .contactElement {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.15);
+        height: 9vh;
+        border-radius: 6px;
+        margin: 2.8vh 13.5%;
+    }
+    .contactElement p {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(0, -50%);
+        margin: 0;
+    }
+    .in {
+        background-image: url(../images/Linkedin-icon.png);
+    }
+    .github {
+        background-image: url(../images/github.png);
+    }
+    .mail {
+        background-image: url(../images/mail.png);
+    }
+    .in, .github, .mail {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        background-size: 100%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -387,6 +444,30 @@ section {
     #home p {
         font-size: 17px;
     }
+    .skill {
+        width: 31%;
+        height: 10vh;
+        margin: 1.8vh 1.10%;
+    }
+    .skill:not(:nth-child(2n)) {
+        float: left;
+    }
+    .skill:nth-child(2n) {
+        float: left;
+    }
+    .slider h1 {
+        font-size: 30px;
+    }
+    .slider h2 {
+        font-size: 14px;
+    }
+    .in, .github, .mail {
+        width: 33px;
+        height: 33px;
+    }
+    .contactElement p {
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -402,6 +483,11 @@ section {
     }
     #home p {
         font-size: 17px;
+    }
+    .skill {
+        width: 22%;
+        height: 10vh;
+        margin: 1.8vh 1.5%;
     }
 }
 
@@ -423,6 +509,37 @@ section {
     #home p {
         font-size: 2.4vh;
     }
+    .skill {
+        width: 19%;
+        height: 13vh;
+        border-radius: 1vh;
+        margin: 0.8vh 0.5%;
+    }
+    .slider h1 {
+        font-size: 5vh;
+    }
+    .slider h2 {
+        font-size: 2vh;
+        margin-top: 3vh;
+    }
+    .skill p {
+        font-size: 3vh;
+    }
+    .titleOfPage {
+        margin-left: 2vw;
+    }
+    .in, .github, .mail {
+        width: 35px;
+        height: 35px;
+    }
+    .contactElement p {
+        font-size: 25px;
+    }
+    .contactElement {
+        margin: 0 auto;
+        max-width: 820px;
+        margin-bottom: 1.8vh;
+    }
 }
 
 @media (min-width: 1980px) {
@@ -443,5 +560,17 @@ section {
     }
     #home p {
         font-size: 1.8vw;
+    }
+    .contactElement {
+        border-radius: 1vh;
+        margin: 2.8vh 22.5%;
+        max-width: none;
+    }
+    .contactElement p {
+        font-size: 4vh;
+    }
+    .in, .github, .mail {
+        width: 5vh;
+        height: 5vh;
     }
 }
