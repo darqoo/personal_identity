@@ -9,31 +9,34 @@ window.addEventListener('load', function() {
     setTimeout(
         function() {
             homePage();
-            homePageAnimation = false;
         }, 600);
+    var firstLi = document.getElementsByClassName('pagination')[0].firstChild.firstChild;
+    firstLi.addEventListener("click", function() {
+        setTimeout(homePage, 1000);
+    });
 });
 
 function homePage() {
-    var row = [];
-    opacity = 0;
-    smoothlyShow();
-    if (homePageAnimation) {
-        typedTextRead();
-        typedTextWrite();
-    } else {
-        document.getElementById('my_text_read').style.display = "block";
-    };
+    if ($('.pagination').children()[0].children[0].className === "active") {
+        document.getElementsByClassName('smoothly-show')[0].style.opacity = 1;
+        var row = [];
+        if (homePageAnimation) {
+            typedTextRead();
+            typedTextWrite();
+        };
 
-    function typedTextRead() {
-        var text = document.getElementById('my_text_read');
+        function typedTextRead() {
+            var text = document.getElementById('my_text_read');
 
-        for (var x = 0; x < text.children.length; x++) {
-            row.push(x);
-            row[x] = [];
-            for (var y = 0; y < text.children[x].textContent.length; y++) {
-                row[x].push(text.children[x].textContent[y]);
+            for (var x = 0; x < text.children.length; x++) {
+                row.push(x);
+                row[x] = [];
+                for (var y = 0; y < text.children[x].textContent.length; y++) {
+                    row[x].push(text.children[x].textContent[y]);
+                };
             };
         };
+        homePageAnimation = false;
     };
 
     function intervalWrite() {
@@ -98,8 +101,11 @@ function smoothlyShow() {
                 if (n && n.length) {
                     var o = e - n[0].pageX,
                         r = a - n[0].pageY;
-                    o >= 50 && s.trigger("swipeLeft"), -50 >= o && s.trigger("swipeRight"), r >= 50 && s.trigger("swipeUp"), -50 >= r && s.trigger("swipeDown"), (Math.abs(o) >= 50 || Math.abs(r) >= 50) && s.unbind("touchmove", t)
+                    o >= 50 && s.trigger("swipeLeft"), -50 >= o && s.trigger("swipeRight"),
+                        r >= 50 && s.trigger("swipeUp"), -50 >= r && s.trigger("swipeDown"),
+                        (Math.abs(o) >= 50 || Math.abs(r) >= 50) && s.unbind("touchmove", t)
                 }
+
                 i.preventDefault()
             }
             var e, a, s = i(this);
@@ -125,10 +131,11 @@ function smoothlyShow() {
             }), i(this)
         }, i.fn.slideLeft = function() {
             var n = i("section.active").data("index");
-            return o > n && (location.hash = "#" + (n + 1)), i(this)
+            return o > n && (location.hash = "#" + (n + 1)), i(this);
         }, i.fn.slideRight = function() {
+            setTimeout(homePage, 900);
             var n = i("section.active").data("index");
-            return o >= n && n > 1 && (location.hash = "#" + (n - 1)), i(this)
+            return o >= n && n > 1 && (location.hash = "#" + (n - 1)), i(this);
         }, i.fn._render = function() {
             var n = Math.floor(Number(location.hash.split("#")[1]));
             n = n ? n : 1, 1 > n && (n = 1), n > o && (n = o);
@@ -143,6 +150,7 @@ function smoothlyShow() {
             }))
         }, i.fn._bindEvent = function() {
             return i(window).on("hashchange", a._render), i(document).bind("mousewheel DOMMouseScroll", function(i) {
+                setTimeout(homePage, 900);
                 i.preventDefault();
                 var n = i.originalEvent.wheelDelta || -i.originalEvent.detail;
                 a._handleMouseScroll(i, n)
@@ -179,6 +187,10 @@ function smoothlyShow() {
                     zIndex: 4
                 }), 1 == e.pagination && (l += "<li><a data-index='" + (n + 1) + "' href='#" + (n + 1) + "'></a></li>")
             }), i(this)
-        }, a._initStyle()._bindEvent()._render()._renderPagination()
+        }, a._initStyle()._bindEvent()._render()._renderPagination();
+        var numberOfPage = window.location.href.slice(window.location.href.lastIndexOf('.html') + 6);
+        if (numberOfPage === "") numberOfPage = 1;
+        var aLi = $('.pagination').children()[numberOfPage - 1].children[0];
+        aLi.className = "active";
     }
 }(window.jQuery);
