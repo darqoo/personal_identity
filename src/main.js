@@ -186,7 +186,7 @@ function smoothlyShow() {
         }, a._initStyle()._bindEvent()._render()._renderPagination();
         var numberOfPage = window.location.href.slice(window.location.href.lastIndexOf('.html') + 6);
         if (numberOfPage === "") numberOfPage = 1;
-        var aLi = $('.pagination').children()[numberOfPage - 1].children[0];
+        var aLi = document.getElementsByClassName('pagination')[0].children[numberOfPage - 1].children[0];
         aLi.className = "active";
     }
 }(window.jQuery);
