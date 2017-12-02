@@ -184,8 +184,8 @@ function smoothlyShow() {
                 }), 1 == e.pagination && (l += "<li><a data-index='" + (n + 1) + "' href='#" + (n + 1) + "'></a></li>")
             }), i(this)
         }, a._initStyle()._bindEvent()._render()._renderPagination();
-        var numberOfPage = window.location.href.slice(window.location.href.lastIndexOf('.html') + 6);
-        if (numberOfPage === "") numberOfPage = 1;
+        var numberOfPage = window.location.href.slice(-1);
+        if (Number(numberOfPage) < 1 || Number(numberOfPage) > 6 || isNaN(numberOfPage) ) numberOfPage = 1;
         var aLi = document.getElementsByClassName('pagination')[0].children[numberOfPage - 1].children[0];
         aLi.className = "active";
     }
