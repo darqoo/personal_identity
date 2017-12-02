@@ -177,12 +177,8 @@ function smoothlyShow() {
                     width: "100%",
                     height: "100%",
                     left: 100 * n + "%"
-                }).addClass("section").attr("data-index", n + 1), i(this).find("img").css({
-                    minWidth: "100%",
-                    minHeight: "100%",
-                    position: "absolute",
-                    zIndex: 1
-                }), i(this).find("article").css({
+                }).addClass("section").attr("data-index", n + 1),
+                 i(this).find("article").css({
                     boxSizing: "border-box",
                     zIndex: 4
                 }), 1 == e.pagination && (l += "<li><a data-index='" + (n + 1) + "' href='#" + (n + 1) + "'></a></li>")

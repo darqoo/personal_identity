@@ -276,6 +276,56 @@ section {
     -webkit-transition: all 0.5s ease;
 }
 
+.skill, .tool {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+}
+
+.skill {
+    background-color: rgba(255, 192, 0, 0.2);
+}
+
+.tool {
+    background-color: rgba(0, 255, 78, 0.2);
+}
+
+.skill:hover {
+    background-color: rgb(255, 192, 0);
+    color: rgb(0, 0, 0);
+}
+
+.tool:hover {
+    background-color: rgb(0, 255, 78);
+    color: #000000;
+}
+
+.portpholioPage {
+    position: relative;
+    width: 39%;
+    height: 23.5vh;
+    border-radius: 10px;
+    margin: 1.8vh 5.5%;
+    background-color: rgba(4, 0, 255, 0.15);
+}
+
+.portpholioPage img {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.portpholioPage:not(:nth-child(2n)) {
+    float: right;
+}
+
+.portpholioPage:nth-child(2n) {
+    float: left;
+}
+
 @media (max-width: 550px) {
     #home h1 {
         line-height: 0;
@@ -292,14 +342,20 @@ section {
     #contact .titleOfPage {
         margin-bottom: 17vh;
     }
-    .skill {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.15);
-        width: 45%;
-        height: 9vh;
-        text-align: center;
+    .skillsBox {
+        width: 50%;
+        float: left;
+    }
+    .toolsBox {
+        width: 50%;
+        float: right;
+    }
+    .skill, .tool {
+        width: 65%;
+        height: 3.5vh;
         border-radius: 6px;
         margin: 0.8vh 2.5%;
+        font-size: 4.5vw;
     }
     .skill:not(:nth-child(2n)) {
         float: right;
@@ -307,7 +363,13 @@ section {
     .skill:nth-child(2n) {
         float: left;
     }
-    .skill p {
+    .tool:not(:nth-child(2n)) {
+        float: right;
+    }
+    .tool:nth-child(2n) {
+        float: left;
+    }
+    .skill p, .tool p {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -371,14 +433,35 @@ section {
     #skills .titleOfPage {
         margin-bottom: 30px;
     }
+    .slider h1 {
+        font-size: 5vw;
+    }
+    .slider h2 {
+        font-size: 2.5vw;
+        margin-top: 3.5vw;
+        margin-bottom: 10px;
+    }
+    .skillsBox {
+        width: 70%;
+        float: left;
+    }
+    .toolsBox {
+        width: 30%;
+        float: right;
+    }
     .skill {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.15);
-        width: 45%;
-        height: 9vh;
-        text-align: center;
+        width: 30%;
+        height: 5.5vh;
         border-radius: 6px;
-        margin: 0.8vh 2.5%;
+        margin: 0.8vh 1.67%;
+        font-size: 2.5vw;
+    }
+    .tool {
+        width: 46%;
+        height: 5.5vh;
+        border-radius: 6px;
+        margin: 0.8vh 1.5%;
+        font-size: 2.5vw;
     }
     .skill:not(:nth-child(2n)) {
         float: right;
@@ -386,7 +469,13 @@ section {
     .skill:nth-child(2n) {
         float: left;
     }
-    .skill p {
+    .tool:not(:nth-child(2n)) {
+        float: right;
+    }
+    .tool:nth-child(2n) {
+        float: left;
+    }
+    .skill p, .tool p {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -422,8 +511,8 @@ section {
         left: 20%;
         background-size: 100%;
         transform: translate(-50%, -50%);
-        width: 30px;
-        height: 30px;
+        width: 7vh;
+        height: 7vh;
     }
 }
 
@@ -446,8 +535,8 @@ section {
     }
     .skill {
         width: 31%;
-        height: 10vh;
-        margin: 1.8vh 1.10%;
+        height: 5.5vh;
+        margin: 0.8vh 1.10%;
     }
     .skill:not(:nth-child(2n)) {
         float: left;
@@ -489,6 +578,13 @@ section {
         height: 10vh;
         margin: 1.8vh 1.5%;
     }
+    .tool {
+        width: 46%;
+        height: 10vh;
+        border-radius: 6px;
+        margin: 1.8vh 1.5%;
+        font-size: 2.5vw;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -514,6 +610,13 @@ section {
         height: 13vh;
         border-radius: 1vh;
         margin: 0.8vh 0.5%;
+    }
+    .tool {
+        width: 47%;
+        height: 13vh;
+        border-radius: 1vh;
+        margin: 0.8vh 1.5%;
+        font-size: 3vh;
     }
     .slider h1 {
         font-size: 5vh;
