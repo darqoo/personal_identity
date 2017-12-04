@@ -165,20 +165,29 @@ a:hover {
 }
 
 #home {
-    position: absolute;
-    top: 25%;
+    align-self: center;
+}
+
+#home h1 {
+    line-height: 0;
+    margin-bottom: 34px;
+    font-size: 30px;
+    font-family: MyriadPro-Bold;
+}
+
+#home p {
+    font-size: 15px;
 }
 
 #my_text_read {
     display: none;
 }
 
-#start, #skills, #business, #hobby, #labs, #contact {
+.card {
     position: absolute;
     top: 14%;
     width: 100%;
     height: 77%;
-    /*border: 1px solid;*/
 }
 
 section {
@@ -283,11 +292,11 @@ section {
 }
 
 .skill {
-    background-color: rgba(255, 192, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .tool {
-    background-color: rgba(0, 255, 78, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .skill:hover {
@@ -300,81 +309,50 @@ section {
     color: #000000;
 }
 
-.portpholioPage {
-    position: relative;
-    width: 39%;
-    height: 23.5vh;
-    border-radius: 10px;
-    margin: 1.8vh 5.5%;
-    background-color: rgba(4, 0, 255, 0.15);
+.boxOfProjects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 
-.portpholioPage img {
+.portfolioPage {
+    position: relative;
+    width: 47%;
+    height: 29.5vh;
+    border-radius: 10px;
+    margin: 10px;
+    background: aliceblue;
+}
+
+.portfolioPage img {
     height: 90%;
     width: 90%;
     position: absolute;
-    top: 55%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.portpholioPage:not(:nth-child(2n)) {
-    float: right;
+article {
+    box-sizing: border-box;
+    z-index: 4;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.portpholioPage:nth-child(2n) {
-    float: left;
+.boxOfPage {
+    width: 970px;
 }
 
 @media (max-width: 550px) {
-    #home h1 {
-        line-height: 0;
-        margin-bottom: 34px;
-        font-size: 30px;
-        font-family: MyriadPro-Bold;
-    }
-    #home p {
-        font-size: 15px;
-    }
     .titleOfPage {
         margin-bottom: 3vh;
-    }
-    #contact .titleOfPage {
-        margin-bottom: 17vh;
-    }
-    .skillsBox {
-        width: 50%;
-        float: left;
-    }
-    .toolsBox {
-        width: 50%;
-        float: right;
-    }
-    .skill, .tool {
-        width: 65%;
-        height: 3.5vh;
-        border-radius: 6px;
-        margin: 0.8vh 2.5%;
-        font-size: 4.5vw;
-    }
-    .skill:not(:nth-child(2n)) {
-        float: right;
-    }
-    .skill:nth-child(2n) {
-        float: left;
-    }
-    .tool:not(:nth-child(2n)) {
-        float: right;
-    }
-    .tool:nth-child(2n) {
-        float: left;
-    }
-    .skill p, .tool p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
     }
     .contactElement {
         position: relative;
@@ -412,21 +390,10 @@ section {
 
 @media (min-width: 550px) {
     #home {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 73%;
         height: 200px;
     }
-    #home h1 {
-        line-height: 0;
-        margin-bottom: 34px;
-        font-size: 30px;
-        font-family: MyriadPro-Bold;
-    }
-    #home p {
-        font-size: 15px;
-    }
+
     #contact .titleOfPage {
         margin-bottom: 17vh;
     }
@@ -520,12 +487,8 @@ section {
     .logo {
         top: 14%;
     }
-    #start, #skills, #business, #hobby, #labs, #contact {
+    .card {
         top: 16%;
-    }
-    #home {
-        width: 55%;
-        height: 235px;
     }
     #home h1 {
         font-size: 35px;
@@ -563,16 +526,11 @@ section {
     .logo {
         top: 19%;
     }
-    #start, #skills, #business, #hobby, #labs, #contact {
+    .card {
         top: 21%;
         height: 76%;
     }
-    #home h1 {
-        font-size: 35px;
-    }
-    #home p {
-        font-size: 17px;
-    }
+
     .skill {
         width: 22%;
         height: 10vh;
@@ -591,16 +549,16 @@ section {
     .logo {
         top: 19%;
     }
-    #start, #skills, #business, #hobby, #labs, #contact {
+    .card {
         top: 21%;
         height: 76%;
     }
     #home {
-        width: 58%;
-        height: 35%;
+        width: 77%;
+        height: 40%;
     }
     #home h1 {
-        font-size: 7vh;
+        font-size: 6.5vh;
     }
     #home p {
         font-size: 2.4vh;
@@ -649,10 +607,13 @@ section {
     .logo {
         top: 19%;
     }
-    #start, #skills, #business, #hobby, #labs, #contact {
+    .card {
         top: 21%;
         height: 76%;
     }
+    .boxOfPage {
+     width: 100%; 
+}
     #home {
         width: 58%;
         height: 35%;

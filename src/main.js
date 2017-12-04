@@ -106,6 +106,7 @@ function smoothlyShow() {
                         (Math.abs(o) >= 50 || Math.abs(r) >= 50) && s.unbind("touchmove", t)
                 }
 
+                i.preventDefault();
             }
             var e, a, s = i(this);
             s.bind("touchstart", n)
@@ -150,6 +151,7 @@ function smoothlyShow() {
         }, i.fn._bindEvent = function() {
             return i(window).on("hashchange", a._render), i(document).bind("mousewheel DOMMouseScroll", function(i) {
                 setTimeout(homePage, 900);
+                i.preventDefault();
                 var n = i.originalEvent.wheelDelta || -i.originalEvent.detail;
                 a._handleMouseScroll(i, n)
             }), a.swipeEvents().bind("swipeLeft", function() {
@@ -183,7 +185,7 @@ function smoothlyShow() {
             }), i(this)
         }, a._initStyle()._bindEvent()._render()._renderPagination();
         var numberOfPage = window.location.href.slice(-1);
-        if (Number(numberOfPage) < 1 || Number(numberOfPage) > 6 || isNaN(numberOfPage) ) numberOfPage = 1;
+        if (Number(numberOfPage) < 1 || Number(numberOfPage) > 5 || isNaN(numberOfPage) ) numberOfPage = 1;
         var aLi = document.getElementsByClassName('pagination')[0].children[numberOfPage - 1].children[0];
         aLi.className = "active";
     }
