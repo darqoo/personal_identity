@@ -145,21 +145,6 @@ a:hover {
     }
 }
 
-.logo {
-    position: absolute;
-    top: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    z-index: 999;
-}
-
-.logo img {
-    min-width: 200px;
-    width: 22%;
-}
-
 .smoothly-show {
     opacity: 0;
 }
@@ -355,7 +340,22 @@ article {
     width: 30px;
 }
 
+.logo {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
 @media (max-width: 550px) {
+    .logo {
+        transform: translate(-50%, -50%);
+    }
+    .logo img {
+        min-width: 160px;
+        width: 90%;
+    }
     .titleOfPage {
         margin-bottom: 3vh;
     }
@@ -394,6 +394,14 @@ article {
 }
 
 @media (min-width: 550px) {
+    .logo {
+        top: 3%;
+        left: 5%;
+        transform: none;
+    }
+    .logo img {
+        width: 75%;
+    }
     #home {
         width: 73%;
         height: 200px;
@@ -484,9 +492,6 @@ article {
 }
 
 @media (min-width: 768px) {
-    .logo {
-        top: 14%;
-    }
     .card {
         top: 16%;
     }
@@ -523,9 +528,6 @@ article {
 }
 
 @media (min-width: 992px) {
-    .logo {
-        top: 19%;
-    }
     .card {
         top: 21%;
         height: 76%;
@@ -545,9 +547,6 @@ article {
 }
 
 @media (min-width: 1200px) {
-    .logo {
-        top: 19%;
-    }
     .card {
         top: 21%;
         height: 76%;
@@ -604,7 +603,7 @@ article {
 
 @media (min-width: 1980px) {
     .logo {
-        top: 19%;
+        width: 20%;
     }
     .card {
         top: 21%;
