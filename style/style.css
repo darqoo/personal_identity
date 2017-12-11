@@ -338,6 +338,7 @@ article {
 
 .iconSkillsTools {
     width: 30px;
+    margin-right: 7px;
 }
 
 .logo {
@@ -351,13 +352,44 @@ article {
 @media (max-width: 550px) {
     .logo {
         transform: translate(-50%, -50%);
+        width: 40%;
     }
     .logo img {
-        min-width: 160px;
-        width: 90%;
+        min-width: 140px;
+        width: 100%;
+        max-width: 180px;
+    }
+    .boxOfPage {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-flow: wrap;
     }
     .titleOfPage {
-        margin-bottom: 3vh;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .skillsBox, .toolsBox {
+        width: 50%;
+    }
+    .skill, .tool {
+        color: #ffffff;
+        margin: 6px 3px 0 3px;
+        height: 40px;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill_tool_element {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 110px;
+    }
+    .skill p, .tool p {
+        font-size: 17px;
     }
     .contactElement {
         position: relative;
@@ -398,6 +430,8 @@ article {
         top: 3%;
         left: 5%;
         transform: none;
+        width: 40%;
+        max-width: 232px;
     }
     .logo img {
         width: 75%;
@@ -547,6 +581,9 @@ article {
 }
 
 @media (min-width: 1200px) {
+    .logo img {
+        width: 85%;
+    }
     .card {
         top: 21%;
         height: 76%;
@@ -603,7 +640,11 @@ article {
 
 @media (min-width: 1980px) {
     .logo {
-        width: 20%;
+        width: 16%;
+        max-width: 585px;
+    }
+    .logo img {
+        width: 100%;
     }
     .card {
         top: 21%;
