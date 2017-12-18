@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: "MyriadPro-Regular";
-    font-size: 20px;
+    font-size: 14px;
     width: 100%;
     min-height: 100%;
     height: 100%;
@@ -154,18 +154,25 @@ a:hover {
 }
 
 #home h1 {
-    line-height: 0;
-    margin-bottom: 34px;
-    font-size: 30px;
+    line-height: 1em;
+    font-size: 1.6em;
     font-family: MyriadPro-Bold;
+    letter-spacing: -1px;
 }
 
 #home p {
-    font-size: 15px;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 5px;
 }
 
 #my_text_read {
     display: none;
+}
+
+#my_text_write {
+    text-align: center;
+    height: 200px;
 }
 
 .card {
@@ -204,11 +211,8 @@ section {
 }
 
 .slider h2 {
-    font-size: 12px;
+    font-size: 1em;
     color: #a9a9a9;
-    line-height: 0;
-    margin-top: 20px;
-    margin-bottom: -5px;
 }
 
 .slider section.active article {
@@ -299,7 +303,6 @@ section {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: center;
@@ -321,6 +324,14 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.boxOfContact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 article {
@@ -349,7 +360,7 @@ article {
     z-index: 999;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .logo {
         transform: translate(-50%, -50%);
         width: 40%;
@@ -363,14 +374,16 @@ article {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        flex-flow: wrap;
+    }
+    .boxOfPage h1 {
+        font-size: 1.6em;
     }
     .titleOfPage {
         margin-bottom: 20px;
         width: 100%;
     }
     .skillsBox, .toolsBox {
-        width: 50%;
+        width: 100%;
     }
     .skill, .tool {
         color: #ffffff;
@@ -420,12 +433,12 @@ article {
         left: 20%;
         background-size: 100%;
         transform: translate(-50%, -50%);
-        width: 30px;
-        height: 30px;
+        width: 5vh;
+        height: 5vh;
     }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 600px) {
     .logo {
         top: 3%;
         left: 5%;
