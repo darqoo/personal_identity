@@ -325,6 +325,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .boxOfContact {
     width: 100%;
     height: 100%;
@@ -345,6 +346,7 @@ article {
 
 .boxOfPage {
     width: 970px;
+    padding-top: 10px
 }
 
 .iconSkillsTools {
@@ -360,7 +362,7 @@ article {
     z-index: 999;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
     .logo {
         transform: translate(-50%, -50%);
         width: 40%;
@@ -447,7 +449,7 @@ article {
         max-width: 232px;
     }
     .logo img {
-        width: 75%;
+        width: 30vh;
     }
     #home {
         width: 73%;
@@ -460,46 +462,29 @@ article {
         margin-bottom: 30px;
     }
     .slider h1 {
-        font-size: 5vw;
+        font-size: 20px;
     }
     .slider h2 {
-        font-size: 2.5vw;
-        margin-top: 3.5vw;
-        margin-bottom: 10px;
+        font-size: 11px;
     }
-    .skillsBox {
-        width: 70%;
-        float: left;
+    .skillsBox, .toolsBox {
+        width: 100%;
     }
-    .toolsBox {
-        width: 30%;
-        float: right;
-    }
-    .skill {
-        width: 30%;
-        height: 5.5vh;
+    .skill, .tool {
+        color: #ffffff;
+        margin: 6px 3px 0 3px;
+        height: 40px;
         border-radius: 6px;
-        margin: 0.8vh 1.67%;
-        font-size: 2.5vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
-    .tool {
-        width: 46%;
-        height: 5.5vh;
-        border-radius: 6px;
-        margin: 0.8vh 1.5%;
-        font-size: 2.5vw;
-    }
-    .skill:not(:nth-child(2n)) {
-        float: right;
-    }
-    .skill:nth-child(2n) {
-        float: left;
-    }
-    .tool:not(:nth-child(2n)) {
-        float: right;
-    }
-    .tool:nth-child(2n) {
-        float: left;
+    .skill_tool_element {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 110px;
     }
     .skill p, .tool p {
         margin-left: 10px;
