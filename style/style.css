@@ -358,12 +358,12 @@ article {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .logo {
     position: absolute;
-    top: 9%;
+    top: 14%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
@@ -540,9 +540,11 @@ article {
     }
     .logo img {
         width: 30vh;
+        max-width: 85%;
     }
     #home {
         width: 73%;
+        max-width: 530px;
         height: 200px;
     }
     #contact .titleOfPage {
@@ -629,12 +631,7 @@ article {
     .card {
         top: 16%;
     }
-    #home h1 {
-        font-size: 35px;
-    }
-    #home p {
-        font-size: 17px;
-    }
+
     .skill {
         width: 31%;
         height: 5.5vh;
@@ -690,13 +687,14 @@ article {
     }
     #home {
         width: 77%;
+        max-width: none;
         height: 40%;
     }
     #home h1 {
-        font-size: 6.5vh;
+        font-size: 5.5vh;
     }
     #home p {
-        font-size: 2.4vh;
+        font-size: 2.2vh;
     }
     .skill {
         width: 19%;
