@@ -319,7 +319,7 @@ section {
 
 .portfolioPage {
     position: relative;
-    width: 45%;
+    width: 44%;
     border-radius: 10px;
     margin: 10px;
     background: #000000;
@@ -452,7 +452,7 @@ article {
     background-color: rgba(0, 0, 0, 0.9);
     color: #ffffff;
     border-radius: 10px;
-    font-size: 2em;
+    font-size: 120%;
     font-weight: bold;
 }
 
@@ -489,9 +489,10 @@ article {
         align-items: center;
         justify-content: flex-start;
         min-width: 110px;
+        font-size: 1.1em;
     }
     .iconSkillsTools {
-        width: 20px;
+        width: 54px;
         margin-right: 7px;
     }
     .skill p, .tool p {
@@ -548,9 +549,7 @@ article {
         max-width: 530px;
         height: 200px;
     }
-    #contact .titleOfPage {
-        margin-bottom: 15px;
-    }
+
     #skills .titleOfPage {
         margin-bottom: 30px;
     }
@@ -599,7 +598,7 @@ article {
         background-color: rgba(255, 255, 255, 0.15);
         height: 9vh;
         border-radius: 6px;
-        margin: 2.8vh 13.5%;
+        margin: 5px 13.5%;
     }
     .contactElement p {
         position: absolute;
@@ -667,6 +666,9 @@ article {
         border-radius: 6px;
         margin: 1.8vh 1.5%;
         font-size: 2.5vw;
+    }
+    .pp_display:hover {
+        font-size: 180%;
     }
 }
 
