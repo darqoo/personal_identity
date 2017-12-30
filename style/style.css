@@ -489,7 +489,6 @@ article {
         justify-content: center;
         flex-direction: column;
     }
-}
 
 .skill p, .tool p {
     margin-left: 10px;
@@ -645,7 +644,11 @@ article {
     .contactElement p {
         font-size: 25px;
     }
-
+    .contactElement {
+        margin: 0 auto;
+        max-width: 820px;
+        margin-bottom: 1.8vh;
+    }
 }
 
 @media (min-width: 1980px) {
