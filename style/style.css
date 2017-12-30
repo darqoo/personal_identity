@@ -447,6 +447,9 @@ article {
     height: 100%;
     line-height: 0px;
 }
+.pp_display p {
+    margin-bottom: 0px; 
+}
 
 .pp_display:hover {
     display: flex;
