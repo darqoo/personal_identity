@@ -460,6 +460,7 @@ article {
     .logo {
         transform: translate(-50%, -50%);
         width: 40%;
+        top: 9%;
     }
     .logo img {
         min-width: 140px;
@@ -554,10 +555,10 @@ article {
         margin-bottom: 30px;
     }
     .slider h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
     .slider h2 {
-        font-size: 11px;
+        font-size: 14px;
     }
     .skill, .tool {
         color: #ffffff;
@@ -576,11 +577,11 @@ article {
         margin: 6px 3px 0 3px;
         justify-content: center;
         flex-direction: column;
+        font-size: 16px;
     }
     .skill p, .tool p {
         margin-left: 10px;
     }
-
     .skillsBox, .toolsBox {
         width: 100%;
         height: 100%;
@@ -589,9 +590,9 @@ article {
         flex-direction: column;
         justify-content: space-evenly;
     }
-
     .iconSkillsTools {
         height: 10vh;
+        max-width: 100px;
     }
     .contactElement {
         position: relative;
@@ -624,6 +625,9 @@ article {
         transform: translate(-50%, -50%);
         width: 7vh;
         height: 7vh;
+        max-width: 7vh;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
 
@@ -631,7 +635,6 @@ article {
     .card {
         top: 16%;
     }
-
     .skill {
         width: 31%;
         height: 5.5vh;
@@ -643,12 +646,6 @@ article {
     .skill:nth-child(2n) {
         float: left;
     }
-    .slider h1 {
-        font-size: 30px;
-    }
-    .slider h2 {
-        font-size: 14px;
-    }
     .in, .github, .mail {
         width: 33px;
         height: 33px;
@@ -659,10 +656,6 @@ article {
 }
 
 @media (min-width: 992px) {
-    .card {
-        top: 21%;
-        height: 76%;
-    }
     .skill {
         width: 22%;
         height: 10vh;
@@ -680,10 +673,6 @@ article {
 @media (min-width: 1200px) {
     .logo img {
         width: 85%;
-    }
-    .card {
-        top: 21%;
-        height: 76%;
     }
     #home {
         width: 77%;
